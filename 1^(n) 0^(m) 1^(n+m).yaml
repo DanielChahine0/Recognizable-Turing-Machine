@@ -1,0 +1,11 @@
+name: 1^(n) 0^(m) 1^(n+m)
+source code: "# Recognize the language 1^n 0^m 1^m+n\r\ninput: '100111'\r\nblank: ' '\r\nstart state: start\r\ntable:\r\n# Start\r\n  start:\r\n    1: {write: \"x\", R: loop1}\r\n    \r\n# Loops\r\n  loop1:\r\n    1: R\r\n    0: {R: skip0}\r\n  loop0:\r\n    0: R\r\n    'y': R\r\n    1: {write: \"y\", L: loopback}\r\n  loopback:\r\n    1: L\r\n    0: L\r\n    'y': L\r\n    'x' : {R: decider}\r\n\r\n# Skip\r\n  skip0:\r\n    0: R\r\n    \"y\": R\r\n    1: {write: \"y\",L: loopback}\r\n\r\n# Decider\r\n  decider:\r\n    0: {write: \"x\", R: loop0}\r\n    1: {write: \"x\", R: loop1}\r\n    ' ': {R: accept}\r\n    y: R\r\n    \r\n# Accept\r\n  accept:\r\n    "
+positions:
+  start: {x: 132.66, y: 279.31}
+  loop1: {x: 284.67, y: 301.12}
+  loop0: {x: 671.98, y: 213.14}
+  loopback: {x: 474.4, y: 116.04}
+  skip0: {x: 294.63, y: 112.29}
+  decider: {x: 475.29, y: 313.1}
+  accept: {x: 466.56, y: 436.17}
+editor contents: "# Recognize the language 1^n 0^m 1^m+n\r\ninput: '100111'\r\nblank: ' '\r\nstart state: start\r\ntable:\r\n# Start\r\n  start:\r\n    1: {write: \"x\", R: loop1}\r\n    \r\n# Loops\r\n  loop1:\r\n    1: R\r\n    0: {R: skip0}\r\n  loop0:\r\n    0: R\r\n    'y': R\r\n    1: {write: \"y\", L: loopback}\r\n  loopback:\r\n    1: L\r\n    0: L\r\n    'y': L\r\n    'x' : {R: decider}\r\n\r\n# Skip\r\n  skip0:\r\n    0: R\r\n    \"y\": R\r\n    1: {write: \"y\",L: loopback}\r\n\r\n# Decider\r\n  decider:\r\n    0: {write: \"x\", R: loop0}\r\n    1: {write: \"x\", R: loop1}\r\n    ' ': {R: accept}\r\n    y: R\r\n    \r\n# Accept\r\n  accept:\r\n    "
