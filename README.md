@@ -1,15 +1,15 @@
 # Recognizable-Turing-Machine
 
 ## 
-Created a Turing Machine using YAML languange to recognize the language 1<sup>n</sup>0<sup>n</sup>1<sup>n+m</sup>
+Created a Turing Machine using YAML language to recognize the language 1<sup>n</sup>0<sup>m</sup>1<sup>n+m</sup>
 
 
 ### Template by  [Daniel Chahine](https://github.com/DanielChahine0)
 <hr>
 
-This Turing machine Recognizes the language L(M)={1<sup>n</sup> 0<sup>n</sup> 1<sup>n+m</sup> | n,m ≥ 1}
+This Turing machine Recognizes the language L(M)={1<sup>n</sup> 0<sup>m</sup> 1<sup>n+m</sup> | n,m ≥ 1}
 
-The Machine could be viewd using [THIS LINK](https://turingmachine.io/?import-gist=fc493db5be7246c90e45b934db5dad0a):
+The Machine could be viewd using [THIS LINK](https://turingmachine.io/?import-gist=fc493db5be7246c90e45b934db5dad0a)
 
 ## The machine is split into 4 parts:
 > # Start
